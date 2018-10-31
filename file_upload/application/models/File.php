@@ -1,0 +1,44 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+class File extends CI_Model{
+
+	public function getRows($id = ''){
+		$this->db->select('id,file_name,created');
+		$this->db->from('files');
+		if($id){
+			$this->db->where('id',$id);
+			$query = $this->db->get();
+			$result = $query->row_array();
+		}else{
+			$this->db->order_by('created','desc');
+			$query = $this->db->get();
+			$result = $query->result_array();
+		}
+		return !empty($result)?$result:false;
+	}
+	
+	public function insert($data = array()){
+		$insert = $this->db->insert_batch('files',$data);
+		return $insert?true:false;
+	}
+	public function lastid(){
+			return $this->db->count_all('files');
+	}
+
+	public function Existe($id){
+		$this->db->select('file_name');
+		$this->db->from('files');
+		$query = $this->db->get();
+
+			return !empty($query)?true:false;
+	}
+
+
+	public function GetName($id){
+		return $this->db->get_where('files',array('id'=>$id))->row_array();
+	}
+	public function delete($id){
+		$this->db->delete('files',array('id'=>$id));
+			return true;
+	}
+	
+}

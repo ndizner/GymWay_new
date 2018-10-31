@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="robots" content="index, follow" />
+
+	<!-- mobile setting -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Scripts/CSS and wp_head hook -->
+	<title>Mapa interactivo</title>
+
+	<link rel='stylesheet' id='mapsvg-css'  href='mapsvg.css' type='text/css' media='all' />
+	<script type='text/javascript' src='jquery.min.js'></script>
+	<script type='text/javascript' src='jquery.mousewheel.min.js'></script>
+	<script type='text/javascript' src='mapsvg.min.js'></script>
+
+</head>
+
+<body id="top">
+
+	<div id="mapsvg-71" class="mapsvg"></div>
+
+	<script type="text/javascript">
+
+		jQuery("#mapsvg-71").mapSvg({
+			width: 625,
+			height: 1115,
+			colors: {
+				baseDefault: "#ffffff",
+				background: "",
+				selected: "",
+				hover: "66bbdd",
+				base: "",
+				stroke:"ffffff"
+			},
+			regions: {
+				//JUJUY
+				path2387: { id: "path2387", fill: "#44AA10", tooltip: "", popover: "" },
+				path2399: { id: "path2399", fill: "#44AA10", tooltip: "", popover: "" },
+				path2397: { id: "path2397", fill: "#44AA10", tooltip: "", popover: "" },
+				path2409: { id: "path2409", fill: "#44AA10", tooltip: "", popover: "" },
+				path2413: { id: "path2413", fill: "#44AA10", tooltip: "", popover: "" },
+				path2425: { id: "path2425", fill: "#44AA10", tooltip: "", popover: "" },
+				path2411: { id: "path2411", fill: "#44AA10", tooltip: "", popover: "" },
+				path2417: { id: "path2417", fill: "#44AA10", tooltip: "", popover: "" },
+				path2415: { id: "path2415", fill: "#44AA10", tooltip: "", popover: "" },
+				path2437: { id: "path2437", fill: "#44AA10", tooltip: "", popover: "" },
+				path2455: { id: "path2455", fill: "#44AA10", tooltip: "", popover: "" },
+				path2427: { id: "path2427", fill: "#44AA10", tooltip: "", popover: "" },
+				path2457: { id: "path2457", fill: "#44AA10", tooltip: "", popover: "" },
+				path2439: { id: "path2439", fill: "#44AA10", tooltip: "", popover: "" },
+				path2429: { id: "path2429", fill: "#44AA10", tooltip: "", popover: "" },
+				path4696: { id: "path4696", fill: "#44AA10", tooltip: "", popover: "" },
+				//MENDOZA
+				path172: { id: "path172",fill: "#44AA10", tooltip:"Capital", popover:"" },
+				path2826: { id: "path2826",fill: "#44AA10", tooltip:"General Alvear", popover:"" },
+				path174: { id: "path174",fill: "#44AA10", tooltip:"Godoy Cruz", popover:"" },
+				path168: { id: "path168",fill: "#44AA10", tooltip:"Guaymallén", popover:"" },
+				path2814: { id: "path2814",fill: "#44AA10", tooltip:"Junín", popover:"" },
+				path2812: { id: "path2812",fill: "#44AA10", tooltip:"La Paz", popover:"" },
+				path162: { id: "path162",fill: "#44AA10", tooltip:"Las Heras", popover:"" },
+				path164: { id: "path164",fill: "#44AA10", tooltip:"Lavalle", popover:"" },
+				path166: { id: "path166",fill: "#44AA10", tooltip:"Luján de Cuyo", popover:"" },
+				path170: { id: "path170",fill: "#44AA10", tooltip:"Maipú", popover:"" },
+				path122: { id: "path122",fill: "#44AA10", tooltip:"Malargüe", popover:"" },
+				path2818: { id: "path2818",fill: "#44AA10", tooltip:"Rivadavia", popover:"" },
+				path102: { id: "path102",fill: "#44AA10", tooltip:"San Carlos", popover:"" },
+				path80: { id: "path80",fill: "#44AA10", tooltip:"General San Martín", popover:"" },
+				path2824: { id: "path2824",fill: "#44AA10", tooltip:"San Rafael", popover:"" },
+				path82: { id: "path82",fill: "#44AA10", tooltip:"Santa Rosa", popover:"" },
+				path2820: { id: "path2820",fill: "#44AA10", tooltip:"Tunuyán", popover:"" },
+				path2816: { id: "path2816",fill: "#44AA10", tooltip:"Tupungato", popover:"" },
+				//CORDOBA
+				path3989: { id: "path3989",fill: "#44AA10", tooltip:"Capital", popover:"" },
+				path132: { id: "path132",fill: "#44AA10", tooltip:"Punilla", popover:"" },
+				path142: { id: "path142",fill: "#44AA10", tooltip:"Colon", popover:"" },
+				path3991: { id: "path3991",fill: "#44AA10", tooltip:"Santa Maria", popover:"" },
+				path180: { id: "path180",fill: "#44AA10", tooltip:"Calamuchita", popover:"" },
+				path160: { id: "path160",fill: "#44AA10", tooltip:"Rio Segundo", popover:"" },
+				path3974: { id: "path3974",fill: "#44AA10", tooltip:"Totoral", popover:"" },
+				path3960: { id: "path3960",fill: "#44AA10", tooltip:"Tulumba", popover:"" },
+				path3964: { id: "path3964",fill: "#44AA10", tooltip:"Rio Seco", popover:"" },
+				path3957: { id: "path3957",fill: "#44AA10", tooltip:"Sobremonte", popover:"" },
+				path3969: { id: "path3969",fill: "#44AA10", tooltip:"Ischilin", popover:"" },
+				path3967: { id: "path3967",fill: "#44AA10", tooltip:"Cruz del Eje", popover:"" },
+				path3982: { id: "path3982",fill: "#44AA10", tooltip:"Minas", popover:"" },
+				path158: { id: "path158",fill: "#44AA10", tooltip:"Pocho", popover:"" },
+				path3993: { id: "path3993",fill: "#44AA10", tooltip:"San Alberto", popover:"" },
+				path3998: { id: "path3998",fill: "#44AA10", tooltip:"San Javier", popover:"" },
+				path214: { id: "path214",fill: "#44AA10", tooltip:"Rio Cuarto", popover:"" },
+				path4016: { id: "path4016",fill: "#44AA10", tooltip:"General Roca", popover:"" },
+				path268: { id: "path268",fill: "#44AA10", tooltip:"Pte. Roque Saen Peña", popover:"" },
+				path4006: { id: "path4006",fill: "#44AA10", tooltip:"Marcos Juarez", popover:"" },
+				path192: { id: "path192",fill: "#44AA10", tooltip:"Union", popover:"" },
+				path4011: { id: "path4011",fill: "#44AA10", tooltip:"Juarez Celman", popover:"" },
+				path4004: { id: "path4004",fill: "#44AA10", tooltip:"General San Martin", popover:"" },
+				path4000: { id: "path4000",fill: "#44AA10", tooltip:"Tercero Arriba", popover:"" },
+				path3978: { id: "path3978",fill: "#44AA10", tooltip:"Rio Primero", popover:"" },
+				path3972: { id: "path3972",fill: "#44AA10", tooltip:"San Justo", popover:"" },
+				//SAN LUIS
+				path3816: { id: "path3816",fill: "#44AA10", tooltip:"Pedernera", popover:"" },
+				path56: { id: "path56",fill: "#44AA10", tooltip:"Junín", popover:"" },
+				path3808: { id: "path3808",fill: "#44AA10", tooltip:"Chacabuco", popover:"" },
+				path3803: { id: "path3803",fill: "#44AA10", tooltip:"Ayacucho", popover:"" },
+				path3813: { id: "path3813",fill: "#44AA10", tooltip:"Coronel Pringles", popover:"" },
+				path3821: { id: "path3821",fill: "#44AA10", tooltip:"Gobernador Dupuy", popover:"" },
+				path3806: { id: "path3806",fill: "#44AA10", tooltip:"Libertador General San Martín", popover:"" },
+				path3810: { id: "path3810",fill: "#44AA10", tooltip:"Belgrano", popover:"" },
+				path3818: { id: "path3818",fill: "#44AA10", tooltip:"La Capital", popover:"" },
+				//SANJUAN
+				path2507: { id: "path2507",fill: "#44AA10", tooltip:"Calingasta", popover:"" },
+				path2471: { id: "path2471",fill: "#44AA10", tooltip:"Iglesia", popover:"" },
+				path2489: { id: "path2489",fill: "#44AA10", tooltip:"Jáchal", popover:"" },
+				path3959: { id: "path3959",fill: "#44AA10", tooltip:"Caucete", popover:"" },
+				path2497: { id: "path2497",fill: "#44AA10", tooltip:"Valle Fértil", popover:"" },
+				path3977: { id: "path3977",fill: "#44AA10", tooltip:"25 de Mayo", popover:"" },
+				path3956: { id: "path3956",fill: "#44AA10", tooltip:"Ullum", popover:"" },
+				path2573: { id: "path2573",fill: "#44AA10", tooltip:"Sarmiento", popover:"" },
+				path2543: { id: "path2543",fill: "#44AA10", tooltip:"Zonda", popover:"" },
+				path2527: { id: "path2527",fill: "#44AA10", tooltip:"Angaco", popover:"" },
+				path2529: { id: "path2529",fill: "#44AA10", tooltip:"Albardón", popover:"" },
+				path3975: { id: "path3975",fill: "#44AA10", tooltip:"Pocito", popover:"" },
+				path3965: { id: "path3965",fill: "#44AA10", tooltip:"San Martín", popover:"" },
+				path3973: { id: "path3973",fill: "#44AA10", tooltip:"Rawson", popover:"" },
+				path3971: { id: "path3971",fill: "#44AA10", tooltip:"9 de Julio", popover:"" },
+				path2551: { id: "path2551",fill: "#44AA10", tooltip:"Rivadavia", popover:"" },
+				path2547: { id: "path2547",fill: "#44AA10", tooltip:"Chimbas", popover:"" },
+				path2549: { id: "path2549",fill: "#44AA10", tooltip:"Santa Lucía", popover:"" },
+				path2553: { id: "path2553",fill: "#44AA10", tooltip:"Capital", popover:"" },
+				//LARIOJA
+				path116: { id: "path116",fill: "#44AA10", tooltip:"Capital", popover:"" },
+				path120: { id: "path120",fill: "#44AA10", tooltip:"Chilecito", popover:"" },
+				path3735: { id: "path3735",fill: "#44AA10", tooltip:"Arauco", popover:"" },
+				path138: { id: "path138",fill: "#44AA10", tooltip:"Chamical", popover:"" },
+				path188: { id: "path188",fill: "#44AA10", tooltip:"Rosario Vera Peñaloza", popover:"" },
+				path3748: { id: "path3748",fill: "#44AA10", tooltip:"Coronel Felipe Varela", popover:"" },
+				path156: { id: "path156",fill: "#44AA10", tooltip:"General Belgrano", popover:"" },
+				path176: { id: "path176",fill: "#44AA10", tooltip:"General Ocampo", popover:"" },
+				path3738: { id: "path3738",fill: "#44AA10", tooltip:"Famatina", popover:"" },
+				path190: { id: "path190",fill: "#44AA10", tooltip:"General San Martín", popover:"" },
+				path108: { id: "path108",fill: "#44AA10", tooltip:"Castro Barros", popover:"" },
+				path3759: { id: "path3759",fill: "#44AA10", tooltip:"General Juan F. Quiroga", popover:"" },
+				path3733: { id: "path3733",fill: "#44AA10", tooltip:"San Blas de los Sauces", popover:"" },
+				path146: { id: "path146",fill: "#44AA10", tooltip:"General Ángel V. Peñaloza", popover:"" },
+				path64: { id: "path64",fill: "#44AA10", tooltip:"Vinchina", popover:"" },
+				path130: { id: "path130",fill: "#44AA10", tooltip:"Independencia", popover:"" },
+				path118: { id: "path118",fill: "#44AA10", tooltip:"Sanagasta", popover:"" },
+				path3740: { id: "path3740",fill: "#44AA10", tooltip:"General Lamadrid", popover:"" },
+
+
+
+
+
+
+
+
+
+
+			},
+			viewBox: [0,-210.86000000000013,1580,2818.7200000000003],
+			zoom: {
+				on: true,
+				limit: [0,15],
+				delta: 1.2,
+				buttons: {
+					on: true,
+					location: "right"
+				}
+			},
+			scroll: {
+				on: true,
+				limit: false,
+				background: false
+			},
+			gauge: {
+				on: false,
+				labels: {
+					low: "low",
+					high: "high"
+				},
+				colors: {
+					lowRGB: {r: 0,g: 0,b: 0,a: 1},
+					highRGB: {r: 0,g: 0,b: 0,a: 1},
+					low: "",
+					high: "",
+					diffRGB: {r: 0,g: 0,b: 0,a: 0}
+				},
+				min: 0,
+				max: false
+			},
+			source: "mapa2.svg",
+			title: "Argentina",
+			responsive: true
+		});
+	</script>
+
+</body>
+</html>
